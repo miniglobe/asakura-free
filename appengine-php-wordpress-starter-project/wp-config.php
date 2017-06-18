@@ -28,12 +28,19 @@
         define('DB_USER', 'wp_user');
         define('DB_PASSWORD', 'wp_user');
     } else {
-        /** The name of the local database for WordPress */
+        // /** The name of the local database for WordPress */
+        // define('DB_NAME', 'wordpress_db');
+        // /** Local environment MySQL login info */
+        // define('DB_HOST', '127.0.0.1');
+        // define('DB_USER', 'root');
+        // define('DB_PASSWORD', 'password');
+            /** The name of the Cloud SQL database for WordPress */
         define('DB_NAME', 'wordpress_db');
-        /** Local environment MySQL login info */
-        define('DB_HOST', '127.0.0.1');
-        define('DB_USER', 'root');
-        define('DB_PASSWORD', 'password');
+        /** Live environment Cloud SQL login and SITE_URL info */
+        /** Note that from App Engine, the password is not required, so leave it blank here */
+        define('DB_HOST', ':/cloudsql/asakura-free-pj-170807:us-central1:asakura-free-db');
+        define('DB_USER', 'wp_user');
+        define('DB_PASSWORD', 'wp_user');
     }
 
     // Determine HTTP or HTTPS, then set WP_SITEURL and WP_HOME
