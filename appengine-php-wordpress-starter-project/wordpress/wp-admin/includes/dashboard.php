@@ -1513,8 +1513,8 @@ function wp_check_browser_version() {
 			'body'			=> array( 'useragent' => $_SERVER['HTTP_USER_AGENT'] ),
 			'user-agent'	=> 'WordPress/' . get_bloginfo( 'version' ) . '; ' . home_url()
 		);
-
-		$response = wp_remote_post( 'http://api.wordpress.org/core/browse-happy/1.1/', $options );
+		if (isset($_SERVER['SERVER_SOFTWARE']) && strpos($_SERVER['SERVER_SOFTWARE'],'Google App Engine') !== false)
+			$response = wp_remote_post( 'http://api.wordpress.org/core/browse-happy/1.1/', $options );
 
 		if ( is_wp_error( $response ) || 200 != wp_remote_retrieve_response_code( $response ) )
 			return false;
