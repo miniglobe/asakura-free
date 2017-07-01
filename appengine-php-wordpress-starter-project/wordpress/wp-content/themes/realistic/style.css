@@ -86,11 +86,12 @@ img {
 	width: 100%;
 }
 .content-area {
-	float: left;
+	width: 100%;
 }
 .post-box, article {
 	margin-bottom: 20px;
 	margin-top: 0 !important;
+	display: inline-block;
 }
 .sticky .featured, .featured {
 	position: absolute;
@@ -108,22 +109,25 @@ img {
 .post-img {
 	position: relative;
 	display: block;
-	height: 50%;
+	height: 120px;
 }
 .post-img img {
-	width: auto;
-	height: auto;
+	width: 35%;
+	height: 35%;
+	padding: 0;
 }
 .post-title {
 	margin-bottom: 10px;
+	height: 30px;
 }
 
 .post-excerpt {
 	margin-bottom: 10px;
+	height: 90px;
 }
 .moretag {
-	float: right;
-	margin-top: 10px;
+	margin-bottom: 10px;
+	text-align: center;
 }
 .moretag a {
 	text-decoration: none;
@@ -242,7 +246,28 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 3 Elements
 --------------------------------------------------------------*/
-
+.project-item dt {
+	height: 30px;
+	width: 25%;
+	background-color: #0bbadf;
+	color: #FFF;
+	border-radius: 3px;
+	display: inline-block;
+}
+.project-item dd {
+	display: inline-block;
+	width: 75%;
+}
+.border {
+	margin: 0;
+}
+.site-main {
+	text-align: justify;
+}
+.post-data {
+	height: 300px;
+	margin: 0 5%;
+}
 .site-title a {
 	color: #FFF;
 	text-decoration: none;
@@ -267,6 +292,11 @@ h1, h2, h3, h4, h5, h6 {
 	bottom: 0;
 	width: 100% !important;
 	height: 100% !important;
+}
+
+.post-img a {
+	display: block;
+	text-align: center;
 }
 
 /*--------------------------------------------------------------
@@ -902,6 +932,7 @@ input, textarea {
 	color: #949494;
 	font-size: 0.9em;
 	margin-bottom: 10px;
+	height: 40px;
 }
 .post-info > span {
 	display: inline-block;
