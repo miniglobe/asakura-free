@@ -6,11 +6,11 @@
  */
 
 ?>
-	<article id="post-<?php the_ID(); ?>" <?php post_class('post-box mdl-card mdl-shadow--2dp mdl-grid mdl-cell mdl-cell--12-col'); ?>>
+	<article id="post-<?php the_ID(); ?>" <?php post_class('post-box demo-card-square mdl-card mdl-shadow--2dp'); ?>>
 		<?php if ( is_sticky() ) {
 			echo '<div class="featured"><i class="icon icon-star"></i></div>';
 		} ?>	
-		<div class="post-img mdl-cell mdl-cell--4-col-desktop mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+		<div class="post-img mdl-card__title mdl-card--expand">
 			<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">		
 				<img width="218" height="181" src="<?php echo realistic_get_thumbnail( 'featured' ); ?>" class="attachment-featured wp-post-image" alt="<?php the_title_attribute(); ?>">
 				<?php $format = get_post_format( $post->ID );
@@ -42,8 +42,8 @@
 					<?php archives_excerpt(); ?>
 				</span>
 			</div><!-- .entry-content -->
-			<div class="moretag">
-				<a class="mdl-button mdl-js-button" href="<?php the_permalink(); ?>"><?php _e( 'View article...', 'realistic' ); ?></a>
+			<div class="moretag mdl-card--border">
+				<a class="mdl-button mdl-js-button" href="<?php the_permalink(); ?>"><?php _e( '案件詳細へ', 'realistic' ); ?></a>
 			</div>
 		</div><!-- .post-data -->
 	</article><!-- #post-## -->
